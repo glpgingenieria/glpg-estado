@@ -26,20 +26,21 @@
   .num{font-family:"Space Grotesk",Inter,sans-serif;font-variant-numeric:tabular-nums}
   .hidden{display:none!important}
 
-  header{position:relative;z-index:20;background:var(--navy);color:#fff;border-bottom:1px solid #0e1729}
-  .bar{max-width:1180px;margin:0 auto;padding:14px 22px;display:flex;align-items:center;gap:14px;row-gap:10px;flex-wrap:wrap;min-height:60px}
-  .hbrand{display:flex;align-items:center;gap:11px;margin-right:auto}
-  .hbrand img{height:34px;width:auto;display:block}
-  .hbrand .mark{width:32px;height:32px}
-  .hbrand .t{font-family:"Space Grotesk";font-size:15px;font-weight:600;letter-spacing:.2px}
-  .hbrand .t span{display:block;font-size:11px;color:#9fb0cc;font-weight:500}
-  .tcbox{display:flex;align-items:center;gap:8px;background:#1f2f4d;border:1px solid #33456a;border-radius:9px;padding:6px 10px}
-  .tcbox label{font-size:11px;color:#9fb0cc;font-weight:600;text-transform:uppercase;letter-spacing:.4px}
-  .tcbox input{width:78px;background:#0f1a30;border:1px solid #3a4d73;color:#fff;border-radius:6px;padding:5px 8px;font-family:"Space Grotesk";font-size:14px;font-weight:600;text-align:right}
-  .tcbox input:focus{outline:2px solid var(--amber)}
+  header{position:relative;z-index:20;background:#fff;border-bottom:1px solid #e4e9f1;box-shadow:0 2px 12px rgba(23,35,61,.06)}
+  .bar{max-width:1180px;margin:0 auto;padding:14px 22px;display:flex;align-items:center;gap:14px;row-gap:10px;flex-wrap:wrap;min-height:64px}
+  .hbrand{display:flex;align-items:center;gap:13px;margin-right:auto}
+  .hbrand .hlogo{height:50px;width:auto;display:block}
+  .hbrand .hmark svg{width:38px;height:38px;display:block}
+  .hbrand .hsep{width:1px;height:32px;background:#e0e5ee}
+  .hbrand .t{font-family:"Space Grotesk";font-size:16px;font-weight:600;color:var(--navy);letter-spacing:.2px}
+  .hbrand .t span{display:block;font-size:11.5px;color:var(--muted);font-weight:500}
+  .tcbox{display:flex;align-items:center;gap:8px;background:#f4f6f9;border:1px solid #dbe1ec;border-radius:9px;padding:6px 11px}
+  .tcbox label{font-size:11px;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.4px}
+  .tcbox input{width:82px;background:#fff;border:1px solid #cdd5e2;color:var(--navy);border-radius:6px;padding:6px 8px;font-family:"Space Grotesk";font-size:14px;font-weight:600;text-align:right}
+  .tcbox input:focus{outline:2px solid var(--amber);border-color:transparent}
   .btn{border:0;border-radius:9px;padding:9px 15px;font:600 13px Inter;cursor:pointer;display:inline-flex;align-items:center;gap:7px;transition:.15s}
-  .btn-amber{background:var(--amber);color:#3a2607}.btn-amber:hover{background:#f0a63f}
-  .btn-ghost{background:#26375a;color:#dce6f5}.btn-ghost:hover{background:#2e4269}
+  .btn-amber{background:var(--amber);color:#fff}.btn-amber:hover{background:#ff6a33}
+  .btn-ghost{background:#eef1f6;color:var(--navy);border:1px solid #dde3ec}.btn-ghost:hover{background:#e3e8f1}
   .btn-navy{background:var(--navy);color:#fff;padding:11px 20px;font-size:14px}.btn-navy:hover{background:var(--navy2)}
 
   main{max-width:1180px;margin:0 auto;padding:22px 22px 70px}
@@ -156,8 +157,10 @@
 <header>
   <div class="bar">
     <div class="hbrand">
-      <svg class="mark" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="#0f2547"/><path d="M16 6c2.4 3.2 5 5.3 5 9a5 5 0 0 1-10 0c0-1.3.5-2.4 1.2-3.4.3 1.3 1 2 1.8 2.2-.3-2.6.7-5.4 2-7.8Z" fill="#F0561E"/></svg>
-      <div class="t">Estado de cuentas<span>GLPG · Obras e Ingeniería</span></div>
+      <img class="hlogo" src="logo.png" alt="GLPG" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-flex'">
+      <span class="hmark" style="display:none"><svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="#123A6B"/><path d="M16 6c2.4 3.2 5 5.3 5 9a5 5 0 0 1-10 0c0-1.3.5-2.4 1.2-3.4.3 1.3 1 2 1.8 2.2-.3-2.6.7-5.4 2-7.8Z" fill="#F0561E"/></svg></span>
+      <span class="hsep"></span>
+      <div class="t">Estado de cuentas<span>Clientes por obra</span></div>
     </div>
     <div class="tcbox" id="tcbox" style="display:none">
       <label for="tc">Dólar hoy</label><input id="tc" class="num" type="number" value="1510" min="0" step="1">
